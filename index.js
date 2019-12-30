@@ -88,10 +88,65 @@
 // }
 
 //You only need one - Beginner
+// function check(a, x) {
+//   return a.includes(x);
+// }
 
-function check(a, x) {
-  return a.includes(x);
+// console.log(check([1, 2], 1));
+//Is this my tail?
+// function correctTail(body, tail) {
+//   let sub = body.substr(body.length - tail.length);
+//   if ((sub === tail)) {
+//     return true;
+//   } else return false;
+// }
+
+// //Stringy Strings
+// function stringy(size) {
+//   var num = [1];
+//   for (let i = 0; i <= size - 2; i++) {
+//     if (num[i] === 0) {
+//       num.push(1);
+//     } else num.push(0);
+//   }
+//   return num.join('')
+// }
+
+// //CountSheep
+// var countSheep = function(num) {
+//   let str ='';
+//   for (let i = 1; i <= num; i++) {
+//     str += `${i} sheep...`;
+//   }
+//   return str;
+// };
+
+// Find Nearest square number
+function nearestSq(n) {
+  var squeares = [];
+  var fill;
+  for (let i = 1; i <= n; i++) {
+    squeares.push(i * i);
+  }
+
+  console.log(squeares);
+  console.log(squeares.length);
+
+  for (let i = 1; i <= squeares.length; i++) {
+    if (
+      (squeares[i] < n) & (squeares[i + 1] > n) &&
+      n - squeares[i] < squeares[i + 1] - n
+    ) {
+      fill = squeares[i];
+    } else if (
+      (squeares[i] > n) & (squeares[i - 1] < n) &&
+      squeares[i] - n   < n - squeares[i - 1]  
+    ) {
+      fill = squeares[i];
+    }
+  }
+
+  return   fill === undefined ? 1 : fill;;
 }
 
-console.log(check([1, 2], 1));
-
+console.log(nearestSq(1));
