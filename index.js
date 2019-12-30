@@ -121,32 +121,33 @@
 //   return str;
 // };
 
-// Find Nearest square number
-function nearestSq(n) {
-  var squeares = [];
-  var fill;
-  for (let i = 1; i <= n; i++) {
-    squeares.push(i * i);
-  }
+// // Find Nearest square number
+// function nearestSq(n) {
+//   var squeares = [];
+//   var fill;
 
-  console.log(squeares);
-  console.log(squeares.length);
+//   //arr constructor
+//   for (let i = 1; i <= n; i++) {
+//     if ( i * i >= n * 2) continue;
+//      else {
+//       squeares.push(i * i);
+//     }
+//   }
+  
+//  // Number selector
+//   for (let i = 1; i <= squeares.length; i++) {
+//     if (
+//       (squeares[i] < n) & (squeares[i + 1] > n) &&
+//       n - squeares[i] < squeares[i + 1] - n
+//     ) {
+//       fill = squeares[i];
+//     } else if (
+//       (squeares[i] > n) & (squeares[i - 1] < n) &&
+//       squeares[i] - n < n - squeares[i - 1]
+//     ) {
+//       fill = squeares[i];
+//     }
+//   }
 
-  for (let i = 1; i <= squeares.length; i++) {
-    if (
-      (squeares[i] < n) & (squeares[i + 1] > n) &&
-      n - squeares[i] < squeares[i + 1] - n
-    ) {
-      fill = squeares[i];
-    } else if (
-      (squeares[i] > n) & (squeares[i - 1] < n) &&
-      squeares[i] - n   < n - squeares[i - 1]  
-    ) {
-      fill = squeares[i];
-    }
-  }
-
-  return   fill === undefined ? 1 : fill;;
-}
-
-console.log(nearestSq(1));
+//   return fill === undefined ? 1 : fill;
+// }
