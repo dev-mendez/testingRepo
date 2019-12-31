@@ -121,7 +121,7 @@
 //   return str;
 // };
 
-// // Find Nearest square number
+// Find Nearest square number
 // function nearestSq(n) {
 //   var squeares = [];
 //   var fill;
@@ -133,8 +133,8 @@
 //       squeares.push(i * i);
 //     }
 //   }
-  
-//  // Number selector
+//   console.log(squeares)
+//    // Number selector
 //   for (let i = 1; i <= squeares.length; i++) {
 //     if (
 //       (squeares[i] < n) & (squeares[i + 1] > n) &&
@@ -151,3 +151,11 @@
 
 //   return fill === undefined ? 1 : fill;
 // }
+
+
+// function nearestSq(n){
+//    let a = Math.round(Math.pow(n, 0.5));
+//     return a*a;
+// }
+
+// console.log(nearestSq(5))
